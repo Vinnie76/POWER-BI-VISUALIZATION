@@ -17,7 +17,7 @@ We have created a star schema where our sales is the fact table and the other ta
 Go back to the report view i.e. The first icon on top of the model view icon.
 
 
-1.Visualize Sales by location
+1.**Visualize Sales by location**
 
 Click on Stacked- Bar Chart
 Drag Geo under location table to the X-axis
@@ -26,7 +26,7 @@ Drag Amount under the sales table to the Y-axis
 
 
 
-2.What is the company’s Total Sales?
+2.**company’s Total Sales**
 
 Go to the sales table on the left side of the canvas
 Right click on Amount and select New measure
@@ -38,39 +38,39 @@ A new measure with name Total sales is created.
 
 
 
-3.What is our Total Cost as a company?
+3.**Total Cost as a company**
 
 We don’t have the cost column in our tables, so we have to create a new column for our cost.
 Go to the data view. The second icon under the report view at the far right of the canvas.
 Go to Table tools at the top and click on New Column.
 
 
-Type the formula Cost = sales[Boxes] * RELATED(products [Cost per box])
+**Type the formula Cost = sales[Boxes] * RELATED(products [Cost per box])**
 
 
 Hit Enter and return to the report view.
-Now repeat the steps you used to create the Total Sales measure and create Total Cost. The formula for this is Total Cost = sum(sales[Cost]).
-4.What is the company’s Total Profit?
+Now repeat the steps you used to create the Total Sales measure and create Total Cost. The formula for this is **Total Cost = sum(sales[Cost]).**
+4.**company’s Total Profit**
 
 Again, create a New measure and name it Total Profit
-Type the formula Total Profit = [Total Sales] – [Total Cost] 
+Type the formula **Total Profit = [Total Sales] – [Total Cost]** 
 Create a New measure and name it Profit%. To calculate our Profit%, we divide Total Profit over Total Sales.
-Type Profit% = divide ([Total Profit], [Total Sales])
+Type **Profit% = divide ([Total Profit], [Total Sales])**
 
 
-5.Has the Company met its Profit target?
+5.**Company Profit target**
 
 Create a New measure and label it Profit Target
-Type the formula Profit Target Achieved? = if([Profit%] > 0.5, “Yes”, “No”)
+Type the formula **Profit Target Achieved? = if([Profit%] > 0.5, “Yes”, “No”)**
 
 
 Time to start putting them all together on our canvas 😊
 
-Go under Visualizations and select cards
+6.**Go under Visualizations and select cards**
 Drag Total Cost and place in the fields box
 
 
-Go to Format Visual, the icon beside Build Visual under the Visualization pane.
+7.**Go to Format Visual, the icon beside Build Visual under the Visualization pane.**
 Click on General and change the Background color. (Choose any color of your choice).
 Turn on Shadow to give shadow effect to our card.
 Click on the Total Cost card and press CTRL + C. Paste the visual by pressing CTRL + V in the canvas. Do those four times and align the cards as shown in the picture below.
@@ -103,15 +103,6 @@ Drag the Month column under the Date Hierarchy to the X-axis and drag the Total 
 
 Do same for the rest of the cards. (Tip: You can use the copy and paste trick)
 
-
-
-
-
-
-
-
-
-
 We want to see the performance of the Salespersons 
 
 Click on Table under the Visualization pane
@@ -120,33 +111,21 @@ Add a conditional bar to the Total Profit column.
 Go to Total Profit under the Values pane and click on the drop down.
 Click on Conditional formatting and then Data bars.
 
-
 We want to see performance of our products.
 
 Repeat same steps for that of Salespersons
 
-
-
-
 Now bring back Sales per Country
-
-
 
 Change the Geo to Country. To change the name, right click on the X-axis where you dropped the Geo data and select Rename Visual.
 Change the title of the chart to Total Sales by Country
 Add on more card and display the total number of Customers
 
-
 Now we want to add title to our dashboard
 
 Type a title of your choice. I am going for Sales Dashboard Analysis
 
-
 Format the background color and style the font. Be creative😉
-
-
-
-
 
 
 Now we want to slice or filter our visuals 
