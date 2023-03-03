@@ -141,7 +141,5 @@ Go to the insert bar and add a shape. Select rectangle and extend the shape to c
 Change the background color of the rectangle to white and go to format and send backwards
 
 
-You should end up with an output like this or even better. Be creative with your formatting.
-
 # Author
 **Vincent Kipkorir**
